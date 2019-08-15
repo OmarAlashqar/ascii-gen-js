@@ -1,0 +1,25 @@
+{
+  "name": "ascii-gen-js",
+  "version": "0.0.1",
+  "description": "Image to ASCII converter",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "ascii",
+    "image",
+    "art"
+  ],
+  "author": "Omar Alashqar",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "1.2.0",
+    "sharp": "0.23.0"
+  },
+  "devDependencies": {
+    "eslint": "6.1.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.18.2"
+  }
+}
