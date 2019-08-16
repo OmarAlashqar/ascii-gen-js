@@ -40,3 +40,6 @@ Image                   |  ASCII
 ![original](res/3.jpg)  |  ![sample ascii output](samples/small.png)
 
 ![sample ascii output](samples/small.png)
+
+## References
+Credits to [Robert Heaton](https://robertheaton.com/), who runs a blog about programming cool projects that inspired this one.
