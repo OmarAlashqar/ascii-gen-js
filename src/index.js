@@ -10,6 +10,8 @@ const avg = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
 // note: they must return a value between 0 - 1
 const brightnessMapFns = {
   avg: (rgbList) => avg(rgbList) / 255,
+  lightness: (rgbList) => (Math.max(...rgbList) + Math.min(...rgbList)) / 2 / 255,
+  luminocity: ([r, g, b]) => (0.21 * r + 0.72 * g + 0.07 * b) / 255,
 };
 
 const getChar = (brightness, invert = false) => {
@@ -42,7 +44,7 @@ function getPixelParser(buffer, width, height) {
 }
 
 /**
- * **options.brightnessMapFn** Can be one of 'avg' (more coming) or a
+ * **options.brightnessMapFn** Can be one of 'avg', 'lightness', 'luminocity' or a
  * custom fn with signature (rgb: Number[3]) -> Number between 0-1
  *
  * @param {ArrayBuffer} imgBuffer

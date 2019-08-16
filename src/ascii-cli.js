@@ -17,6 +17,8 @@ async function run() {
   const terminalHeightPx = Math.floor(process.stdout.rows) || undefined;
 
   const { data, info } = await sharp(fileName)
+    .gamma()
+    .normalise()
     .resize({ width: terminalWidthPx, height: terminalHeightPx, fit: 'inside' })
     .raw()
     .toBuffer({ resolveWithObject: true });
