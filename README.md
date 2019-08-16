@@ -14,9 +14,17 @@ The tool will try to fit the image within the bounds of your terminal without st
 ### Arguments
 * `filename`
 * `-i` `--invert`: `Boolean` *optional*
-* `-t` `--type`: `String<'avg'>` *optional*
+* `-t` `--type`: `String<'avg', 'lightness', 'luminocity'>` *optional*
 
 ### Usage
 ```bash
 ascii-cli -i -t avg path_to_img.png
 ```
+
+### Samples
+
+
+![sample ascii output](samples/big.png)
+
+With a smaller font, you'll get more detail
+![sample ascii output](samples/small.png)
