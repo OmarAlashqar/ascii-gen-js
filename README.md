@@ -3,9 +3,48 @@ A small tool for converting images into ASCII. It uses the [sharp](https://githu
 
 I find that it works best if you use a black and white image, but feel free to mess around with it! :fire:
 
+Tested with node **v10**.
+
+
 ## Next steps
-* I'll enable the program to read images through your webcam, so you can take cool selfies :raised_hands:
-* It'd be really cool if I can use that to stream videos through your webcam... ASCII videos!
+* Smoother experience
+* Adding some splashes of colour
+* It would be really cool if I can use that to stream videos through your webcam properly... ASCII videos!
+
+## ascii-cli-cam
+Try it out through your webcam! I'm still working on making the code more performant and streamable so you can get closer to a smooth video experience.
+
+### Dependencies
+
+Since this tool uses `node-webcam` to interact with the webcam, you'll need to install its dependency, based on your OS.
+
+#### Linux
+
+```
+#Linux relies on fswebcam currently
+#Tested on ubuntu
+
+sudo apt-get install fswebcam
+```
+
+#### Mac OSX
+
+```
+#Mac OSX relies on imagesnap
+#Repo https://github.com/rharder/imagesnap
+#Avaliable through brew
+
+brew install imagesnap
+```
+
+#### Windows
+Lucky you, no installation required!
+
+### Usage
+
+```
+node src/ascii-cli-cam.js [-i | --invert] [-t | --type <avg|lightness|luminocity>]
+```
 
 ## ascii-cli
 Useful for trying out the tool through your terminal :smile:
@@ -21,7 +60,7 @@ The tool will try to fit the image within the bounds of your terminal without st
 
 ### Usage
 ```bash
-node src/ascii-cli.js -i -t avg path_to_img.png
+node src/ascii-cli.js <path-to-img> [-i | --invert] [-t | --type <avg|lightness|luminocity>]
 ```
 
 ### Samples

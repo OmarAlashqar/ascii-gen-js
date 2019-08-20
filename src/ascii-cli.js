@@ -2,15 +2,16 @@ const sharp = require('sharp');
 const argv = require('minimist')(process.argv.slice(2));
 
 const { asciify, CHARS_PER_PIXEL } = require('./index');
+const { clearConsole } = require('./util');
 
 // validate cli arguments & flags
-const { _: [fileName], invert: iInvert, i, iType, t } = argv;
+const {
+  _: [fileName], invert: iInvert, i, iType, t,
+} = argv;
 const invert = iInvert || i;
 const type = iType || t;
 
 if (!fileName) throw Error('Expected an image filename as an argument, did not find any');
-
-const clearConsole = () => console.log('\033[2J');
 
 async function run() {
   const terminalWidthPx = Math.floor(process.stdout.columns / CHARS_PER_PIXEL) || 80;
